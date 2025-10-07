@@ -14,8 +14,8 @@
     "href": "https://docs.langchain.com/oss/python"
   },
   "favicon": {
-    "light": "/images/brand/docs-favicon.png",
-    "dark": "/images/brand/docs-favicon.png"
+    "light": "/images/brand/docs-favicon.svg",
+    "dark": "/images/brand/docs-favicon.svg"
   },
   "fonts": {
     "heading": {
@@ -59,6 +59,10 @@
       {
         "header": "Resources",
         "items": [
+          {
+            "label": "Forum",
+            "href": "https://forum.langchain.com/"
+          },
           {
             "label": "Changelog",
             "href": "https://changelog.langchain.com/"
@@ -118,8 +122,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Forum",
-      "href": "https://forum.langchain.com/"
+      "label": "Try LangSmith",
+      "href": "https://smith.langchain.com/"
     }
   },
   "navigation": {

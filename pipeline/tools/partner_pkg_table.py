@@ -3,6 +3,7 @@
 Results in `oss/python/integrations/providers/index.mdx`
 
 Usage (from repo root):
+
 ```
 uv sync --group test
 
@@ -113,14 +114,13 @@ def _enrich_package(p: dict) -> dict | None:
     # Handling for package URLs
     if p["type"] in ("monorepo", "langchain-org"):
         if p.get("integration") == "false":
-            p["package_url"] = (
-                f"https://reference.langchain.com/python/{p['name_short']}/"
-            )
+            # I don't think we'll hit this case since we filter them out?
+            p["package_url"] = f"https://reference.langchain.com/python/{p['name']}/"
         else:
             # Integration
             p["package_url"] = (
                 "https://reference.langchain.com/python/integrations"
-                f"/{p['name_short'].replace('-', '_')}/"
+                f"/{p['name'].replace('-', '_')}/"
             )
     else:  # Third-party
         p["package_url"] = f"https://pypi.org/project/{p['name']}/"

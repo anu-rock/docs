@@ -1,4 +1,7 @@
-.PHONY: dev build format lint test install clean lint_md lint_md_fix broken-links build-references preview-references format-check
+.PHONY: all dev build format lint test install clean lint_md lint_md_fix broken-links build-references preview-references format-check
+
+# Default target
+all: help
 
 dev:
 	@echo "Starting development mode..."

@@ -134,7 +134,7 @@ Use an MCP-compliant client to connect to the LangGraph server. The following ex
     import asyncio
 
     from langchain_mcp_adapters.tools import load_mcp_tools
-    from langgraph.prebuilt import create_react_agent
+    from langchain.agents import create_agent
 
     server_params = {
         "url": "https://mcp-finance-agent.xxx.us.langgraph.app/mcp",
@@ -153,7 +153,7 @@ Use an MCP-compliant client to connect to the LangGraph server. The following ex
                 tools = await load_mcp_tools(session)
 
                 # Create and run a react agent with the tools
-                agent = create_react_agent("openai:gpt-4.1", tools)
+                agent = create_agent("openai:gpt-4.1", tools)
 
                 # Invoke the agent with a message
                 agent_response = await agent.ainvoke({"messages": "What can the finance agent do for me?"})

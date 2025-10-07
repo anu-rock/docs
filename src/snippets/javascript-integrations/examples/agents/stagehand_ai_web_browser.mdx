@@ -5,7 +5,7 @@ import {
   StagehandNavigateTool,
 } from "@langchain/community/agents/toolkits/stagehand";
 import { ChatOpenAI } from "@langchain/openai";
-import { createReactAgent } from "@langchain/langgraph/prebuilt";
+import { createAgent } from "@langchain/agents";
 
 async function main() {
   // Initialize Stagehand once and pass it to the tools
@@ -24,7 +24,7 @@ async function main() {
   });
 
   // Create the agent using langgraph
-  const agent = createReactAgent({
+  const agent = createAgent({
     llm: model,
     tools: [actTool, navigateTool],
   });

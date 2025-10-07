@@ -40,11 +40,11 @@ Before agents can authenticate, you need to configure an OAuth provider using th
 
 3. Set LangChain's API as an available callback URL using this structure:
    ```
-   http://api.host.langchain.com/v2/auth/callback/{provider_id}
+   https://api.host.langchain.com/v2/auth/callback/{provider_id}
    ```
    For example, if your provider_id is "github-local-dev", use:
    ```
-   http://api.host.langchain.com/v2/auth/callback/github-local-dev
+   https://api.host.langchain.com/v2/auth/callback/github-local-dev
    ```
 
 4. Use `client.create_oauth_provider()` with the credentials from your OAuth app:

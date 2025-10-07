@@ -37,7 +37,7 @@ This site is currently being migrated from a previous Sphinx-based implementatio
 - [ ] [Social cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
 - [ ] [Google Analytics](https://mrkeo.github.io/setup/setting-up-site-analytics)
 - [ ] [Versioning?](https://mrkeo.github.io/setup/setting-up-versioning)
-- [ ] [Show keyboard shortcut in search window](https://github.com/squidfunk/mkdocs-material/issues/2574#issuecomment-821979698)
+- [ ] [Show keyboard shortcut in search window](https://github.com/squidfunk/mkdocs-material/issues/2574#issuecomment-821979698) - also add cmd + k to match Mintlify
 
 ---
 

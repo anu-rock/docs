@@ -5,6 +5,8 @@
 # Python reference documentation Makefile
 # ---------------------------------------
 
+all: help
+
 # Build files for deployment
 build:
 	uv sync --link-mode=copy
@@ -28,3 +30,9 @@ serve-docs:
 
 # tests:
 # 	uv run pytest tests/unit_tests
+
+help:
+	@echo "Available targets:"
+	@echo "  build            - Build the documentation for deployment"
+	@echo "  serve-clean-docs - Serve the documentation with a clean build (for previewing)"
+	@echo "  serve-docs       - Serve the documentation for local development (faster)"

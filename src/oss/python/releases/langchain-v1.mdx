@@ -25,7 +25,7 @@ LangChain 1.0 introduces new features:
 
 - A new `.content_blocks` property on message objects. This property provides a fully typed view of message content and standardizes modern LLM features across providers, including reasoning, citations, server-side tool calls, and more. There are no breaking changes associated with the new message content. Refer to the [message content](/oss/langchain/messages#content) docs for more info.
 
-- New prebuilt `langgraph` chains and agents in `langchain`. The surface area of the `langchain` package has been reduced to focus on popular and essential abstractions. A new `langchain-legacy` package is available for backward compatibility. Refer to the new [agents docs](/oss/langchain/agents) and to the [release notes](https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.0.0a1) for more detail.
+- New prebuilt `langgraph` chains and agents in `langchain`. The surface area of the `langchain` package has been reduced to focus on popular and essential abstractions. A new `langchain-classic` package is available for backward compatibility. Refer to the new [agents docs](/oss/langchain/agents) and to the [release notes](https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.0.0a1) for more detail.
 
 ## <Icon icon="ban" /> Breaking changes
 
@@ -33,12 +33,12 @@ LangChain 1.0 introduces new features:
     Python 3.9 is [end of life](https://devguide.python.org/versions/) in October 2025. Consequently, all LangChain packages now require Python 3.10 or higher.
 </Accordion>
 
-<Accordion title="Some legacy code moved to `langchain-legacy`">
+<Accordion title="Some legacy code moved to langchain-classic">
     The new `langchain` package features a reduced surface area that focuses on standard interfaces for LangChain components (e.g., `init_chat_model` and `init_embeddings`) as well as pre-built chains and agents backed by the `langgraph` runtime.
 
-    Existing functionality outside this focus, such as the indexing API and exports of `langchain-community` features, have been moved to the `langchain-legacy` package.
+    Existing functionality outside this focus, such as the indexing API and exports of `langchain-community` features, have been moved to the `langchain-classic` package.
 
-    To restore the previous behavior, update package installs of `langchain` to `langchain-legacy`, and replace imports:
+    To restore the previous behavior, update package installs of `langchain` to `langchain-classic`, and replace imports:
 
     Before:
     ```python
@@ -47,7 +47,7 @@ LangChain 1.0 introduces new features:
 
     After:
     ```python
-    from langchain_legacy import ...
+    from langchain_classic import ...
     ```
 </Accordion>
 

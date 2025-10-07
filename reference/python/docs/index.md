@@ -9,3 +9,6 @@ Welcome to the [LangChain](https://langchain.com) reference documentation! These
     This site contains **Python reference documentation**. You can find **conceptual guides, tutorials, and more** in the [main LangChain documentation site](https://docs.langchain.com).
 
     JavaScript/TypeScript reference documentation is available on the [JS/TS reference site](https://reference.langchain.com/javascript).
+
+!!! info "Looking for legacy docs?"
+    For the legacy docs and API reference for LangChain (pre v1.0), see the [legacy docs](https://python.langchain.com/).

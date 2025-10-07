@@ -137,7 +137,7 @@ langchain-mcp-adapters = { git = "https://github.com/langchain-ai/langchain-mcp-
 ## Other langchain-ai org packages (alphabetical)
 langchain-astradb = { git = "https://github.com/langchain-ai/langchain-datastax.git", subdirectory = "libs/astradb" }
 langchain-ai21 = { git = "https://github.com/langchain-ai/langchain-ai21.git", subdirectory = "libs/ai21" }
-langchain-aws = { git = "https://github.com/langchain-ai/langchain-aws.git", subdirectory = "libs/aws", branch = "michaelnchin:v1.0.0-rebase-09222025" }
+langchain-aws = { git = "https://github.com/langchain-ai/langchain-aws.git", subdirectory = "libs/aws" }
 langchain-azure-ai = { git = "https://github.com/langchain-ai/langchain-azure.git", subdirectory = "libs/azure-ai" }
 langchain-azure-dynamic-sessions = { git = "https://github.com/langchain-ai/langchain-azure.git", subdirectory = "libs/azure-dynamic-sessions" }
 langchain-cerebras = { git = "https://github.com/langchain-ai/langchain-cerebras.git", subdirectory = "libs/cerebras" }

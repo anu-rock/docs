@@ -88,7 +88,7 @@ theme:
     - navigation.tabs
 
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
-    # TODO: investigate, not working?
+    # TODO: insiders only
     # Breadcrumb nav rendered above the title of each page
     - navigation.path
 
@@ -113,15 +113,14 @@ theme:
     # https://mrkeo.github.io/setup/setting-up-site-search/
 
     # https://mrkeo.github.io/setup/setting-up-site-search/#search-suggestions
-    # TODO: check that this works? It's labeled as insiders-only
+    # TODO: insiders-only
     - search.suggest
 
     # https://mrkeo.github.io/setup/setting-up-site-search/#search-highlighting
-    # TODO: check that this works? It's labeled as insiders-only
+    # TODO: insiders-only
     - search.highlight
 
     # https://mrkeo.github.io/setup/setting-up-site-search/#search-sharing
-    # TODO: check that this works? It's labeled as insiders-only
     - search.share
 
   palette:
@@ -143,6 +142,11 @@ theme:
 
 # https://www.mkdocs.org/user-guide/configuration/#plugins
 plugins:
+
+  # https://squidfunk.github.io/mkdocs-material/plugins/typeset/
+  # TODO: need the sponsoring tier
+  # Useful to render formatting in TOC/sidebar (code, icons)
+  # - typeset
 
   # https://squidfunk.github.io/mkdocs-material/plugins/search/#configuration
   # Site-wide search functionality
@@ -169,7 +173,7 @@ plugins:
   # - git-authors
 
   # https://squidfunk.github.io/mkdocs-material/plugins/optimize/#configuration
-  # TODO: need the sponsoring tier
+  # TODO: insiders only
   # - optimize
 
   # https://github.com/mondeja/mkdocs-include-markdown-plugin
@@ -284,11 +288,56 @@ nav:
       - MCP Adapters: langgraph/mcp.md
   - Integrations:
     - Overview: integrations/index.md
-    - Standard Tests: integrations/langchain-tests.md
-    - OpenAI: integrations/langchain-openai.md
-    - Anthropic: integrations/langchain-anthropic.md
-    - AWS: integrations/langchain-aws.md
-    - Google: integrations/langchain-google.md
+    - Popular:
+      - OpenAI: integrations/langchain_openai.md
+      - Anthropic: integrations/langchain_anthropic.md
+      - Google (GenAI): integrations/langchain_google_genai.md
+      - Google (VertexAI): integrations/langchain_google_vertexai.md
+      - AWS: integrations/langchain_aws.md
+      - HuggingFace: integrations/langchain_huggingface.md
+      - Groq: integrations/langchain_groq.md
+      - Ollama: integrations/langchain_ollama.md
+    - All Packages:
+      - Anthropic: integrations/langchain_anthropic.md
+      - AstraDB: integrations/langchain_astradb.md
+      - AWS: integrations/langchain_aws.md
+      - Azure AI: integrations/langchain_azure_ai.md
+      - Azure Dynamic Sessions: integrations/langchain_azure_dynamic_sessions.md
+      - Cerebras: integrations/langchain_cerebras.md
+      - Chroma: integrations/langchain_chroma.md
+      - Cohere: integrations/langchain_cohere.md
+      - Db2: integrations/langchain_db2.md
+      - DeepSeek: integrations/langchain_deepseek.md
+      - Elasticsearch: integrations/langchain_elasticsearch.md
+      - Exa: integrations/langchain_exa.md
+      - Fireworks: integrations/langchain_fireworks.md
+      - Google (Community): integrations/langchain_google_community.md
+      - Google (GenAI): integrations/langchain_google_genai.md
+      - Google (VertexAI): integrations/langchain_google_vertexai.md
+      - Groq: integrations/langchain_groq.md
+      - HuggingFace: integrations/langchain_huggingface.md
+      - IBM: integrations/langchain_ibm.md
+      - Milvus: integrations/langchain_milvus.md
+      - Mistral AI: integrations/langchain_mistralai.md
+      - MongoDB: integrations/langchain_mongodb.md
+      - Neo4J: integrations/langchain_neo4j.md
+      - Nomic: integrations/langchain_nomic.md
+      - Nvidia AI Endpoints: integrations/langchain_nvidia_ai_endpoints.md
+      - Perplexity: integrations/langchain_perplexity.md
+      - Pinecone: integrations/langchain_pinecone.md
+      - Postgres: integrations/langchain_postgres.md
+      - Prompty: integrations/langchain_prompty.md
+      - Qdrant: integrations/langchain_qdrant.md
+      - Redis: integrations/langchain_redis.md
+      - Sema4: integrations/langchain_sema4.md
+      - Snowflake: integrations/langchain_snowflake.md
+      - SQLServer: integrations/langchain_sqlserver.md
+      - Tavily: integrations/langchain_tavily.md
+      - Together: integrations/langchain_together.md
+      - Unstructured: integrations/langchain_unstructured.md
+      - Upstage: integrations/langchain_upstage.md
+      - Weaviate: integrations/langchain_weaviate.md
+      - xAI: integrations/langchain_xai.md
   - Platform:
     - SDK (Python): platform/python_sdk.md
     - RemoteGraph: platform/remote_graph.md
@@ -402,7 +451,7 @@ markdown_extensions:
   - pymdownx.keys
 
   # https://mrkeo.github.io/reference/code-blocks/#snippets
-  # TODO: maybe add if needed?
+  # TODO: maybe add if needed? might be some security implications
   # Allows inserting content from other files
   # - pymdownx.snippets
 
@@ -453,5 +502,4 @@ extra:
       link: https://www.youtube.com/@LangChain
       name: LangChain on YouTube
   # https://mrkeo.github.io/setup/setting-up-the-footer/#remove-generator
-  # TODO: check that this works? It's labeled as insiders-only
   generator: false

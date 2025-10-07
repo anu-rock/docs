@@ -179,20 +179,20 @@ const tickerTool = tool(async (query) => {
 
 ### Define agent
 
-Now that we have defined all of our tools, we can use LangGraph's [`create_react_agent`](https://langchain-ai.github.io/langgraph/reference/prebuilt/)/[`createReactAgent`](https://langchain-ai.github.io/langgraphjs/reference/functions/langgraph_prebuilt.createReactAgent.html) to create our agent.
+Now that we have defined all of our tools, we can use [`create_agent`](https://langchain-ai.github.io/langchain/reference/langchain/agents/create_agent.html)/[`createAgent`](https://langchain-ai.github.io/langgraphjs/reference/functions/langchain_agents.createAgent.html) to create our agent.
 
 <CodeGroup>
 
 ```python Python
 from typing_extensions import Annotated, TypedDict
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 class AgentOutputFormat(TypedDict):
     numeric_answer: Annotated[float | None, ..., "The numeric answer, if the user asked for one"]
     text_answer: Annotated[str | None, ..., "The text answer, if the user asked for one"]
     reasoning: Annotated[str, ..., "The reasoning behind the answer"]
 
-agent = create_react_agent(
+agent = create_agent(
     model="openai:gpt-4o-mini",
     tools=[code_tool, search_tool, polygon_aggregates],
     response_format=AgentOutputFormat,
@@ -735,7 +735,7 @@ Remember to also add the config files for [Vitest](#config-files-for-vitestjest)
   from e2b_code_interpreter import Sandbox
   from langchain_community.tools import PolygonAggregates, TavilySearchResults
   from langchain_community.utilities.polygon import PolygonAPIWrapper
-  from langgraph.prebuilt import create_react_agent
+  from langchain.agents import create_agent
   from typing_extensions import Annotated, TypedDict
 
   search_tool = TavilySearchResults(
@@ -763,7 +763,7 @@ Remember to also add the config files for [Vitest](#config-files-for-vitestjest)
     ]
     reasoning: Annotated[str, ..., "The reasoning behind the answer"]
 
-  agent = create_react_agent(
+  agent = create_agent(
     model="openai:gpt-4o-mini",
     tools=[code_tool, search_tool, polygon_aggregates],
     response_format=AgentOutputFormat,

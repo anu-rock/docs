@@ -2,6 +2,9 @@ version = 1
 revision = 3
 requires-python = ">=3.13.0, <4.0.0"
 
+[manifest]
+overrides = [{ name = "pytest-codspeed", specifier = ">=3.1.0,<4.0.0" }]
+
 [[package]]
 name = "attrs"
 version = "25.3.0"
